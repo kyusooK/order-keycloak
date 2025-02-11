@@ -1,11 +1,12 @@
-server:
+
+server:
   port: 8088
 
 ---
 
 
 keycloak-client:
-  server-url: http://localhost:9090
+  server-url: https://9090-kyusook-orderkeycloak-wsr5gasn5t5.ws-us117.gitpod.io
   realm: master
 
 spring:
@@ -44,9 +45,9 @@ spring:
             user-name-attribute: preferred_username
         registration:
           keycloak:
-            client-id: "<client-id>"
-            client-secret: 
-            redirect-uri: "gateway-path/login/oauth2/code/client-name"
+            client-id: order
+            client-secret: vIQH8mzRGKwIUhirqEbtMoG5R8yUYgwa
+            redirect-uri: https://8088-kyusook-orderkeycloak-wsr5gasn5t5.ws-us117.gitpod.io/login/oauth2/code/order
             authorization-grant-type: authorization_code
             scope: openid
       resourceserver:
